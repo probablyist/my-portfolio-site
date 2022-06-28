@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
-  background: #eeeeee;
-  font-family: 'helvetica neue';
+  background: rgb(224, 224, 224);
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
   font-weight: 200;
   scroll-behavior: smooth;
@@ -12,7 +12,11 @@ body {
 }
 
 section {
-  scroll-margin-top: 74px;
+  scroll-margin-top: 100px;
+  padding: 40px;
+  margin: 25px auto;
+  background: rgb(242, 242, 242);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
 }
 
 *, *:before, *:after {
@@ -20,12 +24,13 @@ section {
 }
 
 .site-wrap {
-  max-width: 700px;
-  margin: 70px auto;
-  background: white;
-  padding: 40px;
+  /* max-width: 700px; */
+  max-width: 75%;
+  margin: auto;
+  /* background: white; */
+  /* padding: 40px; */
   text-align: justify;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05); */
   transform: scale(0.98);
   transition: transform 0.5s;
 }
@@ -45,20 +50,35 @@ header {
   justify-content: center;
 }
 
-h1 {
+
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+header h1 {
   color: white;
   font-size: 7vw;
   text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+
 }
 
-h3 {
+header h2 {
   color: white;
   font-size: 2vw;
   text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
 }
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
 
 nav {
-  background: black;
+  background: rgb(14, 14, 14);
   top: 0;
   width: 100%;
   transition:all 0.5s;
@@ -76,6 +96,7 @@ nav ul {
   padding: 0;
   list-style: none;
   display: flex;
+  font-family: 'Playfair Display', serif;
 }
 
 nav li {
@@ -93,7 +114,7 @@ li.logo {
   background: white;
   transition: all 0.5s;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 li.logo a {
@@ -110,6 +131,57 @@ nav a {
   display: inline-block;
   color: white;
   transition: all 0.2s;
-  text-transform: capitalize;
+  text-transform: uppercase;
+}
+
+.highlight  {
+  color: red;
+  line-height: 0;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.teal-link {
+  color: rgb(40, 125, 125);
+  position: relative;
+  /* text-decoration: none; */
+}
+
+.teal-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: rgb(40, 125, 125);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.teal-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.site-footer {
+  background-color: rgb(14, 14, 14);
+  margin: 0;
+  padding: 2px;
+}
+
+footer p {
+  color: white;
+  position: relative;
+  bottom: 0;
+  font-size: .65rem;
+  text-align: right;
+  padding-right: 3%;
 }
 
